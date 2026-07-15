@@ -11,3 +11,4 @@
 - Verifier rerun outside the sandbox succeeded on `claude-sonnet-5`.
 - Static verification PASS: file existence, relative asset links, internal anchors, viewport meta, responsive CSS structure, JS-by-inspection, Games placeholder, and GitHub Pages static compatibility all passed.
 - Limitations: no live browser/runtime execution, no local HTTP/browser console validation, no GitHub Pages settings validation.
+- Step 7 implementation completed locally with Snake gameplay, but GitHub push to `tenyearslove/tenyearslove.github.io` failed because GitHub rejected the provided token.

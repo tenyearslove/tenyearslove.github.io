@@ -13,13 +13,13 @@
 - Last test: PASS
 
 ## Current State
-- 상태: READY
-- 완료 루프: 1
-- 다음 루프: 2
+- 상태: HITL_REQUIRED
+- 완료 루프: 2
+- 다음 루프: 배포/토큰 재확인
 - Retry: 0
 - fingerprint: 없음
-- blocker: Claude CLI requires unsandboxed network execution in this environment; runtime browser/HTTP verification still pending
-- 마지막 정상 commit·URL: 없음
+- blocker: GitHub push failed because the provided token was rejected by GitHub
+- 마지막 정상 commit·URL: 1ad7f83 (local only)
 
 ## Acceptance
 - 정적 파일 정상 로드, 콘솔 오류 없음, 375px / 768px / 1440px 정상
@@ -44,3 +44,4 @@
 | Loop | 상태 | 실행 모드·모델 | 변경 파일 | 테스트 결과 | Retry | 다음 작업 |
 |---|---|---|---|---|---:|---|
 | 1 | PASSED | CODEX_WORKER + CLAUDE_VERIFIER / claude-sonnet-5 | index.html, styles.css, script.js, AORR_LOG.md, MEMORY.md | 정적 verifier PASS | 0 | 다음 루프에서 게임 구현 |
+| 2 | HITL_REQUIRED | CODEX_WORKER + CLAUDE_VERIFIER / claude-sonnet-5 | script.js | static verifier PASS, push failed | 0 | 배포 토큰 재확인 |
