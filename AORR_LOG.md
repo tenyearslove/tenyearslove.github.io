@@ -12,3 +12,7 @@
 - Static verification PASS: file existence, relative asset links, internal anchors, viewport meta, responsive CSS structure, JS-by-inspection, Games placeholder, and GitHub Pages static compatibility all passed.
 - Limitations: no live browser/runtime execution, no local HTTP/browser console validation, no GitHub Pages settings validation.
 - Step 7 implementation completed locally with Snake gameplay, but GitHub push to `tenyearslove/tenyearslove.github.io` failed because GitHub rejected the provided token.
+- Deployment retried with the provided token and succeeded after merging the remote `main` history with the local site tree.
+- GitHub Pages API reports `status: built`, `public: true`, and `html_url: https://tenyearslove.github.io/`.
+- Direct HTTP HEAD from the sandbox to the public Pages host still could not connect, so live 200 verification remains environment-limited here.
+- In-browser runtime checks passed on the deployed page: navigation rendered, console was clean, and Snake controls responded to Start/Pause/Restart.
