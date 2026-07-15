@@ -19,7 +19,7 @@
 - Retry: 0
 - fingerprint: 없음
 - blocker: Shell-based HTTP check is sandbox-limited; browser runtime checks passed
-- 마지막 정상 commit·URL: 2dfda77 / https://tenyearslove.github.io/
+- 마지막 정상 commit·URL: 1b38934 / https://tenyearslove.github.io/
 
 ## Acceptance
 - 정적 파일 정상 로드, 콘솔 오류 없음, 375px / 768px / 1440px 정상

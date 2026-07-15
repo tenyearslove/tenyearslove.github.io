@@ -16,3 +16,4 @@
 - GitHub Pages API reports `status: built`, `public: true`, and `html_url: https://tenyearslove.github.io/`.
 - Direct HTTP HEAD from the sandbox to the public Pages host still could not connect, so live 200 verification remains environment-limited here.
 - In-browser runtime checks passed on the deployed page: navigation rendered, console was clean, and Snake controls responded to Start/Pause/Restart.
+- Live browser reload after the final docs sync still loaded the deployed page with the expected title and Ready game state.
