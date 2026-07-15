@@ -1,0 +1,393 @@
+:root {
+  color-scheme: light;
+  --bg: #f4efe6;
+  --bg-deep: #e8dcc6;
+  --ink: #1d1a17;
+  --muted: #5e5448;
+  --accent: #7a2f1f;
+  --accent-soft: #a55d44;
+  --card: rgba(255, 250, 242, 0.84);
+  --border: rgba(122, 47, 31, 0.18);
+  --shadow: 0 18px 60px rgba(32, 20, 12, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top, rgba(165, 93, 68, 0.12), transparent 38%),
+    linear-gradient(180deg, #fbf7f1 0%, var(--bg) 45%, #efe4d2 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(14px);
+  background: rgba(248, 242, 233, 0.8);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.eyebrow,
+.section-label,
+.tagline,
+.note,
+.site-footer p,
+.timeline p,
+.card p {
+  color: var(--muted);
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.35rem;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
+.tagline {
+  max-width: 42rem;
+  margin-bottom: 0;
+}
+
+.nav-toggle {
+  display: none;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--ink);
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  padding: 0.5rem 0.2rem;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  border-bottom-color: var(--accent);
+}
+
+main {
+  padding: 1.5rem 0 3rem;
+}
+
+.hero {
+  padding: 2rem 0 1rem;
+}
+
+.hero-card,
+.panel,
+.card,
+.game-stage,
+.pill-button,
+.pad-button,
+.game-overlay {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.hero-card,
+.panel {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.hero-card h2,
+.panel h2 {
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.panel {
+  margin-top: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  padding: 1.1rem;
+}
+
+.game-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(250px, 0.75fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.game-main {
+  display: grid;
+  gap: 1rem;
+}
+
+.game-header,
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.scoreboard div {
+  min-width: 6rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(122, 47, 31, 0.12);
+}
+
+.scoreboard span,
+.status-text {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.scoreboard strong {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+
+.game-stage {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  background:
+    radial-gradient(circle at top, rgba(122, 47, 31, 0.12), transparent 35%),
+    rgba(255, 255, 255, 0.68);
+}
+
+.game-stage canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(35, 29, 22, 0.96), rgba(18, 14, 10, 0.96));
+  touch-action: none;
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 1rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: #f7f2ea;
+  background: rgba(20, 14, 10, 0.42);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.game-overlay.is-visible {
+  opacity: 1;
+}
+
+.control-row {
+  align-items: center;
+}
+
+.pill-button,
+.pad-button {
+  appearance: none;
+  color: var(--ink);
+  font: inherit;
+  padding: 0.8rem 1rem;
+  min-width: 4.4rem;
+}
+
+.pill-button {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.pad-button {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.pill-button:hover,
+.pill-button:focus-visible,
+.pad-button:hover,
+.pad-button:focus-visible,
+.nav-toggle:hover,
+.nav-toggle:focus-visible,
+.site-nav a:focus-visible {
+  outline: 2px solid rgba(122, 47, 31, 0.35);
+  outline-offset: 2px;
+}
+
+.game-sidebar {
+  display: grid;
+  gap: 1rem;
+}
+
+.dpad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.dpad > span {
+  min-height: 3.4rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline article {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(122, 47, 31, 0.12);
+}
+
+.timeline article:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.site-footer {
+  padding: 2rem 0 2.5rem;
+}
+
+.site-footer .shell {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .cards,
+  .game-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 0.75rem;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0.6rem 0;
+  }
+
+  .game-header,
+  .control-row {
+    align-items: stretch;
+  }
+
+  .scoreboard {
+    width: 100%;
+  }
+
+  .pill-button {
+    flex: 1 1 8rem;
+  }
+}

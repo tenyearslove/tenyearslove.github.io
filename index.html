@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siwon (Alex) Sung | Professional Profile</title>
+  <meta name="description" content="Siwon (Alex) Sung의 반응형 프로페셔널 웹사이트입니다.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <div>
+        <p class="eyebrow">Samsung Electronics</p>
+        <h1>Siwon (Alex) Sung</h1>
+        <p class="tagline">Android, XR, 3D Graphics를 중심으로 상용 애플리케이션과 몰입형 경험을 설계하는 엔지니어</p>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#games">Games</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero shell">
+      <div class="hero-card">
+        <p class="section-label">Profile</p>
+        <h2>정돈된 구조, 몰입감 있는 인터랙션, 그리고 신뢰할 수 있는 구현</h2>
+        <p>
+          반응형 웹과 XR, Android, 3D Graphics 경험을 바탕으로 깔끔한 사용자 경험을 만들어갑니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="shell panel">
+      <p class="section-label">About</p>
+      <h2>About Me</h2>
+      <p>
+        Samsung Electronics에서 Android 플랫폼과 XR, 실시간 그래픽 구현에 집중해 온 엔지니어입니다.
+        제한된 하드웨어 환경에서도 동작하는 몰입형 경험을 설계하는 데 관심이 있습니다.
+      </p>
+      <p class="note">프로필의 세부 프로젝트명과 수치형 성과는 [사람 확인 필요]입니다.</p>
+    </section>
+
+    <section id="projects" class="shell panel">
+      <p class="section-label">Projects</p>
+      <h2>Projects</h2>
+      <div class="grid cards">
+        <article class="card">
+          <h3>Android XR Experience</h3>
+          <p>Android 기반 몰입형 경험과 XR 애플리케이션 구현.</p>
+        </article>
+        <article class="card">
+          <h3>3D Graphics Rendering</h3>
+          <p>실시간 렌더링과 제한된 모바일 GPU 환경 대응.</p>
+        </article>
+        <article class="card">
+          <h3>Platform Integration</h3>
+          <p>프런트엔드/백엔드 서버와 데이터 연계 경험.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="shell panel">
+      <p class="section-label">Experience</p>
+      <h2>Experience</h2>
+      <div class="timeline">
+        <article>
+          <h3>Staff Engineer · Samsung Electronics</h3>
+          <p>Jan 2005 - Present</p>
+          <p>Android XR, Android Platform, Android Application, XR/VR/AR, 3D Graphics, Unity, OpenGL, OpenXR.</p>
+        </article>
+        <article>
+          <h3>Sungkyunkwan University</h3>
+          <p>Master's degree, Computer and Information Systems Security/Information Assurance</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="research" class="shell panel">
+      <p class="section-label">Research</p>
+      <h2>Research Interests</h2>
+      <div class="grid cards">
+        <article class="card">
+          <h3>XR Rendering</h3>
+          <p>실시간 몰입형 경험과 제한된 모바일 GPU 환경에서의 그래픽 표현.</p>
+        </article>
+        <article class="card">
+          <h3>Android Platform</h3>
+          <p>플랫폼 통합, 앱 실행 경로, 안정적인 사용자 경험 설계.</p>
+        </article>
+        <article class="card">
+          <h3>3D Interaction</h3>
+          <p>VR/AR에서의 직관적 입력과 시각 피드백 설계.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="games" class="shell panel">
+      <p class="section-label">Games</p>
+      <h2>Games</h2>
+      <div class="game-shell">
+        <div class="game-main">
+          <div class="game-header">
+            <div>
+              <h3>Snake Game</h3>
+              <p>키보드, WASD, 모바일 버튼, 스와이프로 조작할 수 있습니다.</p>
+            </div>
+            <div class="scoreboard" aria-live="polite">
+              <div><span>Score</span><strong id="score">0</strong></div>
+              <div><span>Best</span><strong id="best-score">0</strong></div>
+            </div>
+          </div>
+
+          <div class="game-stage">
+            <canvas id="snake-canvas" width="400" height="400" aria-label="Snake game board"></canvas>
+            <div id="game-overlay" class="game-overlay">Press Start to play</div>
+          </div>
+
+          <div class="control-row">
+            <button type="button" class="pill-button" data-action="start">Start</button>
+            <button type="button" class="pill-button" data-action="pause">Pause</button>
+            <button type="button" class="pill-button" data-action="restart">Restart</button>
+            <p id="game-status" class="status-text">Ready</p>
+          </div>
+        </div>
+
+        <div class="game-sidebar">
+          <div class="card">
+            <h3>How to play</h3>
+            <p>음식(금색 점)을 먹으면 몸이 자라고 점수가 올라갑니다. 벽이나 자기 몸에 닿으면 게임 오버입니다.</p>
+          </div>
+          <div class="card">
+            <h3>Mobile Controls</h3>
+            <div class="dpad" aria-label="모바일 조작 버튼">
+              <span></span>
+              <button type="button" class="pad-button" data-direction="up">↑</button>
+              <span></span>
+              <button type="button" class="pad-button" data-direction="left">←</button>
+              <button type="button" class="pad-button" data-direction="down">↓</button>
+              <button type="button" class="pad-button" data-direction="right">→</button>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Tips</h3>
+            <p>반대 방향 입력은 자동으로 막히고, 일시정지 상태에서는 이동이 멈춥니다. 방향키 또는 WASD를 눌러 시작할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="shell panel">
+      <p class="section-label">Contact</p>
+      <h2>Contact</h2>
+      <p>연락 정보는 확정된 값만 다음 루프에서 반영합니다.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <p>Siwon (Alex) Sung</p>
+      <p>Built with static HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
