@@ -132,6 +132,11 @@
 | 6 | 배포 승인 필요 시점 | 배포 전 마지막 정리 | GitHub Pages 배포 검증 | 배포 성공, URL 확인 | `DEPLOY_APPROVAL_REQUIRED` |
 | 7 | 배포 완료 후 | 없음 | 공개 URL 확인 | 공개 페이지 정상 응답 | `DEPLOYED` |
 
+## 8. Step 8 실행 순서
+- 배포된 사이트, 현재 코드, Git 상태, `AORR.md`, `MEMORY.md`, 마지막 정상 배포 commit·URL, 참고 자료를 확인한다.
+- 사용자 요청 원문을 보존한 뒤 원자적인 `Change Item`으로 분해해 `CHANGE_REQUEST.md`에 기록한다.
+- 구현, 테스트, commit, push, 배포는 하지 않는다.
+
 ## 상태
 - `READY`: 시작 가능
 - `ACTING`: Codex가 최소 수정 중
